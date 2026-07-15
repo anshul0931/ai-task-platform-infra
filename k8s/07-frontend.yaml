@@ -30,7 +30,7 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 20
           securityContext:
-            runAsNonRoot: true
+            runAsNonRoot: false
             allowPrivilegeEscalation: false
 ---
 apiVersion: v1
