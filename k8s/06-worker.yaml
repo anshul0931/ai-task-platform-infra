@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: anshul0931/ai-task-worker:latest
+          image: anshul0931/ai-task-worker:b817e908f61eb0c97cb021ec07cff896aabe2b41
           envFrom:
             - configMapRef:
                 name: ai-task-config
