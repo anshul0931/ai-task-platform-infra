@@ -4,8 +4,9 @@ metadata:
   name: ai-task-ingress
   namespace: ai-task-platform
   annotations:
-    kubernetes.io/ingress.class: traefik
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
 spec:
+  ingressClassName: nginx
   rules:
     - host: ai-task-platform.local
       http:
