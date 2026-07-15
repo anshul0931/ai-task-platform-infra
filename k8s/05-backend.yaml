@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/YOUR_ORG/ai-task-backend:latest
+          image: anshul0931/ai-task-backend:latest
           ports:
             - containerPort: 5000
           envFrom:

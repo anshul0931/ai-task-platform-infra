@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/YOUR_ORG/ai-task-frontend:latest
+          image: anshul0931/ai-task-frontend:latest
           ports:
             - containerPort: 8080
           resources:
