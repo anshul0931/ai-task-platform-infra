@@ -30,15 +30,19 @@ spec:
               cpu: 500m
               memory: 512Mi
           readinessProbe:
-            exec:
-              command: ["mongosh", "--quiet", "--eval", "db.runCommand('ping').ok"]
-            initialDelaySeconds: 10
+            tcpSocket:
+              port: 27017
+            initialDelaySeconds: 30
+            timeoutSeconds: 5
             periodSeconds: 10
+            failureThreshold: 6
           livenessProbe:
-            exec:
-              command: ["mongosh", "--quiet", "--eval", "db.runCommand('ping').ok"]
-            initialDelaySeconds: 20
+            tcpSocket:
+              port: 27017
+            initialDelaySeconds: 60
+            timeoutSeconds: 5
             periodSeconds: 20
+            failureThreshold: 5
   volumeClaimTemplates:
     - metadata:
         name: mongo-data
